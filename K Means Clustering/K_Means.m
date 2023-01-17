@@ -1,4 +1,4 @@
-%clear all
+clear all;
 data = [ 1 2; 3 5;1 1; 5 4 ; 6 2 ; 2.5 4 ; 3 4.5; 7 5; 6 5; 7 3; 6 1; 3 1; 6 6]; % data points
 centriod1 = [2 3];  % Initial Random Centriods
 centriod2 = [4 2];
