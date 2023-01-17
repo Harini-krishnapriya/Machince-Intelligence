@@ -1,8 +1,8 @@
 clc;
 clear all;
 k= input("Enter the value of k: ");
-class1 = [ 1 2; 3 5;1 1; 5 4 ; 6 2 ; 2.5 3 ; 3 4.5]; % data points
-class2 = [ 7 5; 6 5; 7 3; 6 1; 3 1; 6 6];
+class1 = [ 1 2; 3 5;1 1; 5 4 ; 6 2 ; 2.5 3 ; 3 4.5]; % data points of claas1
+class2 = [ 7 5; 6 5; 7 3; 6 1; 3 1; 6 6];            % data points of claas2
 test_input = input("Enter the value of test_data: ");
  for i= 1:length(class1)
     Square_difference=((class1(i,:)-test_input).^2); 
