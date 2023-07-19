@@ -7,7 +7,7 @@ This repository contains Various supervised and Unsupervised Algorithms which ar
 - [K Nearest Neighbours](#k_nearest_neighbours)
 - [K means Clustering](#k_means_clustering)
 - [Principal Component Analysis](#principal_component_analaysis)
-
+- [Support Vector Machine](#support_vector_machine)
 ## Introduction
 Machine intelligence refers to the ability of computer systems to exhibit intelligent behavior and perform tasks that typically require human intelligence. It involves the development and application of algorithms, models, and techniques that enable machines to learn from data, make decisions, solve problems, and improve their performance over time.
 
@@ -71,4 +71,19 @@ These steps outline the core procedure of performing PCA. Various implementation
 PCA is widely applied in various fields, including image processing, finance, genetics, and social sciences. It helps in addressing the curse of dimensionality, reducing noise, identifying key features, and improving computational efficiency. PCA is a valuable tool for gaining insights and simplifying complex datasets while retaining the most relevant information.
 
 ## Linear Discriminant Analysis
+LDA, which stands for Linear Discriminant Analysis, is a supervised dimensionality reduction technique commonly used in pattern recognition and machine learning. It aims to find a linear combination of features that maximizes class separability and reduces the dimensionality of the data.
+## Algorithmic Steps:
+        1. Data preprocessing: LDA requires labeled data, where each sample is associated with a class label. If necessary, perform data preprocessing steps such as scaling or normalization to ensure that features have similar ranges.
+        2. Compute class means: Calculate the mean feature vector for each class. These class means represent the centroid or average position of the samples within each class.
+        3. Compute scatter matrices: LDA involves the computation of two types of scatter matrices:
+           - Within-class scatter matrix (Sw): Measures the spread of samples within each class. It is calculated as the sum of covariance matrices of individual classes.
+           - Between-class scatter matrix (Sb): Measures the separation between classes. It is calculated as the covariance matrix between the class means weighted by the number of samples in each class.
+        4. Solve the generalized eigenvalue problem: Compute the eigenvalues and eigenvectors of the generalized eigenvalue problem Sw^(-1)Sb. The eigenvectors corresponding to the largest eigenvalues represent the directions in the feature space that maximize the class separability.
+        5. Select the desired number of components: Choose the number of components or dimensions to retain based on the desired level of dimensionality reduction or the explained variance.
+        6. Transform the data: Project the original data onto the selected eigenvectors (discriminant components) to obtain the transformed data in the reduced-dimensional space.
+        7. Interpret and analyze: Analyze the transformed data using visualization techniques, classification algorithms, or other downstream tasks. LDA aims to maximize the class separability, making it useful for classification or pattern recognition tasks.
+
+LDA assumes that the data follows a multivariate normal distribution within each class and that the class covariances are equal. It is primarily used for linear classification problems and works best when the assumptions hold. If the assumptions are violated or the data is nonlinearly separable, alternative techniques like Quadratic Discriminant Analysis (QDA) or non-linear dimensionality reduction methods may be more suitable.
+
+LDA is widely employed in various applications, including face recognition, bioinformatics, and text categorization, where dimensionality reduction and class separability are crucial for accurate classification.
 
