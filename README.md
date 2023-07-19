@@ -6,7 +6,8 @@ This repository contains Various supervised and Unsupervised Algorithms which ar
 - [Introduction](#introduction)
 - [K Nearest Neighbours](#k_nearest_neighbours)
 - [K means Clustering](#k_means_clustering)
-- [Principal Component Analysis](#principal_component_analaysis)
+- [Principal Component Analysis](#principal_component_analysis)
+- [Linear Discriminant Analysis](#linear_discriminant_analysis)
 - [Support Vector Machine](#support_vector_machine)
 ## Introduction
 Machine intelligence refers to the ability of computer systems to exhibit intelligent behavior and perform tasks that typically require human intelligence. It involves the development and application of algorithms, models, and techniques that enable machines to learn from data, make decisions, solve problems, and improve their performance over time.
@@ -87,3 +88,28 @@ LDA assumes that the data follows a multivariate normal distribution within each
 
 LDA is widely employed in various applications, including face recognition, bioinformatics, and text categorization, where dimensionality reduction and class separability are crucial for accurate classification.
 
+## Support Vector Machine
+Support Vector Machines (SVM) is a powerful supervised learning algorithm used for classification and regression. It finds an optimal hyperplane to separate classes, with a focus on maximizing the margin. SVM can handle nonlinear data using kernel functions. Support vectors are crucial data points near the margin. SVM is memory-efficient and regularization is controlled by the C-parameter. It can handle high-dimensional data and has applications in various domains.
+## Algorithmic Steps for linear data classification
+        1. Input: Gather labeled training data, consisting of feature vectors and their corresponding class labels (positive or negative).
+        2. Feature scaling: Normalize or standardize the feature vectors to ensure they have similar scales. This step helps prevent certain features from dominating the optimization process.
+        3. Select hyperparameters: Determine the appropriate hyperparameters for SVM, such as the regularization parameter C and the kernel type (in this case, we use a linear kernel).
+        4. Formulate the optimization problem: Set up the optimization problem to find the optimal hyperplane that separates the classes. The objective is to maximize the margin while minimizing the classification error.
+        5. Solve the optimization problem: Utilize optimization techniques, such as quadratic programming, to solve the formulated problem and find the optimal values for the model parameters.
+        6. Compute the decision boundary: The decision boundary is the hyperplane that separates the positive and negative classes. It is defined by the support vectors, which are the data points closest to the hyperplane.
+        7. Classify new data points: Given a new, unlabeled data point, classify it by determining which side of the decision boundary it falls on. The sign of the output of the decision function determines the predicted class label.
+        8. Evaluation: Assess the performance of the SVM model using appropriate evaluation metrics, such as accuracy, precision, recall, or F1 score. This step helps gauge the effectiveness of the model in separating the linear data.
+
+These steps outline the basic process of using SVM to separate linear data. Implementation details may vary depending on the specific programming language or library used for SVM.
+
+## Algorithmic Steps for non-linear data classification
+        1. Input: Gather labeled training data, consisting of feature vectors and their corresponding class labels (positive or negative).
+        2. Feature scaling: Normalize or standardize the feature vectors to ensure they have similar scales. This step helps prevent certain features from dominating the optimization process.
+        3. Select hyperparameters: Determine the appropriate hyperparameters for SVM, such as the regularization parameter C and the kernel type (e.g., polynomial, Gaussian (RBF), or sigmoid).
+        4. Formulate the optimization problem: Set up the optimization problem to find the optimal decision boundary that separates the classes in the transformed feature space. The objective is to maximize the margin while minimizing the classification error using a non-linear kernel.
+        5. Solve the optimization problem: Utilize optimization techniques, such as quadratic programming, to solve the formulated problem and find the optimal values for the model parameters. This step involves solving the dual problem and determining the support vectors.
+        6. Compute the decision function: The decision function uses the support vectors to classify new data points. It calculates the sign of the sum of the product of the support vector weights and the kernel function evaluated on the new data point.
+        7. Classify new data points: Given a new, unlabeled data point, classify it by evaluating the sign of the decision function. A positive sign indicates one class, while a negative sign indicates the other class.
+        8. Evaluation: Assess the performance of the SVM model using appropriate evaluation metrics, such as accuracy, precision, recall, or F1 score. This step helps gauge the effectiveness of the model in classifying the non-linear data.
+
+These steps outline the basic process of using SVM with non-linear kernel functions to classify non-linear data. The choice of the kernel function and its parameters is crucial in capturing the underlying non-linear patterns. Implementation details may vary depending on the specific programming language or library used for SVM.
