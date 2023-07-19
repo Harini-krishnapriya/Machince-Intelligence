@@ -6,6 +6,7 @@ This repository contains Various supervised and Unsupervised Algorithms which ar
 - [Introduction](#introduction)
 - [K Nearest Neighbours](#k_nearest_neighbours)
 - [K means Clustering](#k_means_clustering)
+- [Principal Component Analysis](#principal_component_analaysis)
 
 ## Introduction
 Machine intelligence refers to the ability of computer systems to exhibit intelligent behavior and perform tasks that typically require human intelligence. It involves the development and application of algorithms, models, and techniques that enable machines to learn from data, make decisions, solve problems, and improve their performance over time.
@@ -50,7 +51,24 @@ Key considerations for using K-means clustering include:
 - Dealing with outliers: Outliers can significantly impact the clustering results. Preprocessing or outlier removal techniques might be necessary to obtain more meaningful clusters.
 
 - Scaling features: Since K-means is distance-based, it's often beneficial to scale or normalize the features to ensure that they have similar ranges and prevent any single feature from dominating the distance calculation.
-
-- Interpreting results: After clustering, analyzing and interpreting the resulting clusters is essential. Understanding the characteristics of each cluster can provide insights into the underlying structure of the data.
-
+  
 K-means clustering is widely used in various fields, including image segmentation, customer segmentation, anomaly detection, and pattern recognition. Its simplicity, efficiency, and effectiveness make it a popular choice for exploratory data analysis and as a baseline clustering algorithm.
+
+## Principal Component Analysis
+Principal Component Analysis (PCA) is a dimensionality reduction technique commonly used in data analysis and machine learning. It aims to transform high-dimensional data into a lower-dimensional space while preserving the most important information or patterns in the data.
+## Algorithmic Steps:
+        1. Standardize the data: If the data is not already standardized, normalize it by subtracting the mean and dividing by the standard deviation for each feature. This ensures that all features have zero mean and unit variance.
+        2. Compute the covariance matrix: Calculate the covariance matrix of the standardized data. The covariance matrix represents the relationships and dependencies among the features.
+        3. Perform eigenvalue decomposition: Decompose the covariance matrix into its eigenvectors and eigenvalues. The eigenvectors represent the principal components (PCs), and the eigenvalues represent the amount of variance captured by each PC.
+        4. Select the top-k eigenvectors: Sort the eigenvectors based on their corresponding eigenvalues in descending order. Choose the top-k eigenvectors that capture the most variance or a desired percentage of the total variance.
+        5. Form the projection matrix: Take the selected eigenvectors (PCs) and stack them horizontally to form a projection matrix, where each row represents a PC.
+        6. Transform the data: Multiply the standardized data by the projection matrix to obtain the transformed or reduced-dimensional data. This projection maps the data onto the new PC space.
+        7. Calculate the explained variance: Compute the proportion of total variance explained by each selected PC by dividing its eigenvalue by the sum of all eigenvalues. Optionally, calculate the cumulative sum of the explained variances to assess the amount of variance retained with the chosen number of PCs.
+        8. Interpret and analyze: Analyze the transformed data in the reduced-dimensional space. The PCs can provide insights into the most important features or patterns in the data. Visualizations, clustering, or classification algorithms can be applied to the transformed data for further analysis.
+
+These steps outline the core procedure of performing PCA. Various implementations and libraries exist in different programming languages that automate these steps and provide additional functionalities to facilitate PCA analysis.
+
+PCA is widely applied in various fields, including image processing, finance, genetics, and social sciences. It helps in addressing the curse of dimensionality, reducing noise, identifying key features, and improving computational efficiency. PCA is a valuable tool for gaining insights and simplifying complex datasets while retaining the most relevant information.
+
+## Linear Discriminant Analysis
+
